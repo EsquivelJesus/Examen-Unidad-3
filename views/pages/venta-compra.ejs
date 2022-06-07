@@ -1,0 +1,35 @@
+<%- contentFor('micss') %>
+
+<div class="container">
+    <fieldset>
+        <legend class="text-center header">Conversion</legend>
+        <div class="form-row">
+            <div class="col">
+                <label for="Compra" class="texto">Compra</label>
+                <input type="number" class="form-control" id="Compra" placeholder="Ingrese monto" name="Compra" required>
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Porfavor ingrese un dato.</div>
+            </div>
+            <div class="col">
+                <section class="hero"></section>
+            </div>
+            <div class="col">
+                <label for="Venta" class="texto">Venta</label>  
+                <input type="number" class="form-control" id="Venta" placeholder="Aqui se muestra el resultado" name="Venta" required>
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Porfavor ingrese algun dato.</div>  
+            </div>
+            <br>
+            <div class="col-md-12 text-center">
+                    <H2>Seleccione el tipo de conversion a realizar</H2>
+                    <input type="radio" name="conversion" id="Pesos" value="Pesos a Dolares">Pesos a Dolares<br>
+                    <input type="radio" name="conversion" id="Dolares" value="Dolares a Pesos">Dolares a Pesos<br>
+            </div>
+            <br>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-success btn-lg" onclick="Convertir();">Convertir</button>
+            </div>
+        </div>
+    </fieldset>
+</div>
+

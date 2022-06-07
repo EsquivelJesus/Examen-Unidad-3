@@ -1,0 +1,56 @@
+<%- contentFor('micss') %>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function Convertir(){
+    var monto = parseInt(document.getElementById("Compra").value);
+    var resultado =0;
+    var cambio = 19.50;
+    if(document,getElementById("Peso").checked){
+        resultado = monto / cambio;
+        alert("El cambio de Pesos a Dolares es de: $" + resultado.toFixed(2));
+    }
+    if(document.getElementById("Dolar").checked){
+        resultado = monto * cambio;
+        alert("El cambio de Dolares a Pesos es de: $" + resultado.toFixed(2));
+    }
+    else{
+    alert("Tienes que llenar el campo y seleccionar un tipo de cambio");
+    }
+    document.getElementById("Venta").innerHTML= resultado.toFixed(2);
+}
+        </script>
+    </head>
+    <body>
+        <div class="form-row">
+            <div class="col">
+                <label for="Compra" class="texto">Compra</label>
+                <input type="number" class="form-control" id="Compra" placeholder="Ingrese monto" name="Compra" required>
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Porfavor ingrese un dato.</div>
+            </div>
+            <div class="col">
+                <section class="hero"></section>
+            </div>
+            <div class="col">
+                <label for="Venta" class="texto">Venta</label>  
+                <input type="number" class="form-control" id="Venta" placeholder="Aqui se muestra el resultado" name="Venta" required>
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Porfavor ingrese algun dato.</div>  
+            </div>
+            <br>
+            <div class="col-md-12 text-center">
+                    <H2>Seleccione el tipo de conversion a realizar</H2>
+                    <input type="radio" name="conversion" id="Pesos" value="Pesos a Dolares">Pesos a Dolares<br>
+                    <input type="radio" name="conversion" id="Dolares" value="Dolares a Pesos">Dolares a Pesos<br>
+            </div>
+            <br>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-success btn-lg" onclick="Convertir();">Convertir</button>
+            </div>
+        </div>
+
+    </body>
+</html>

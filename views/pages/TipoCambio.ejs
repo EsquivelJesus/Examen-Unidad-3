@@ -1,0 +1,77 @@
+<%- contentFor('micss') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form action="/tipo-cambio" class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">Tipo de cambio</legend>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="Tipocambio" class="texto">Tipo de cambio actual</label>
+                                <input type="number" class="form-control" id="Tipocambio" placeholder="Ingrese monto" name="TipoCambio" step="0.01" required>
+                                <div class="valid-feedback">Valido.</div>
+                                <div class="invalid-feedback">Porfavor ingrese un dato.</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-success btn-lg">Convertir</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form action="/tipo-cambio" class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">Montos inciales</legend>
+
+                        <h3>Ingrese los montos de dolares y pesos con los que iniciara el dia</h3>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="MontoDolar" class="texto">Monto de Dolares</label>
+                                <input type="number" class="form-control" id="MontoDolar" placeholder="Ingrese monto" name="MontoDolar" required>
+                                <div class="valid-feedback">Valido.</div>
+                                <div class="invalid-feedback">Porfavor ingrese un dato.</div>
+                            </div>
+                            <div class="col">
+                                <label for="MontoPeso" class="texto">Monto de Pesos</label>  
+                                <input type="number" class="form-control" id="MontoPeso" placeholder="Ingrese monto" name="MontoPeso" required>
+                                <div class="valid-feedback">Valido.</div>
+                                <div class="invalid-feedback">Porfavor ingrese algun dato.</div>  
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-success btn-lg" id="montos">Ingresar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#montos").click(function(event){
+            event.preventDefault();
+            $("#montos").prop('disabled',true)
+        
+        return false;
+        })
+    })
+</script>
